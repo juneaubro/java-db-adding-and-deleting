@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="JuneauGawat_COMP228Sec006_ex01.SampleController">
+   <top>
+      <Pane prefHeight="787.0" prefWidth="1557.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="gameTablePane" layoutX="32.0" layoutY="33.0" prefHeight="336.0" prefWidth="237.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Game" />
+                  <Label layoutX="15.0" layoutY="43.0" text="game_id" />
+                  <Label layoutX="15.0" layoutY="71.0" text="game_title" />
+                  <TextField fx:id="gameID" layoutX="74.0" layoutY="39.0" onAction="#typingGameIDTextArea" onKeyTyped="#typingGameIDTextArea" />
+                  <TextField fx:id="gameTableGameTitleTextArea" layoutX="74.0" layoutY="67.0" />
+                  <Button fx:id="gameTableInsertButton" layoutX="14.0" layoutY="101.0" mnemonicParsing="false" onAction="#insertGameTable" text="Insert" />
+                  <Label layoutX="15.0" layoutY="254.0" text="Delete Row with game id" />
+                  <Button fx:id="gameDelBtn" layoutX="19.0" layoutY="283.0" mnemonicParsing="false" onAction="#gameDelButtonClick" text="Delete" />
+                  <TextField fx:id="gameIDSearch" layoutX="163.0" layoutY="250.0" prefHeight="25.0" prefWidth="61.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="playerTablePane" layoutX="530.0" layoutY="33.0" prefHeight="367.0" prefWidth="225.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Player" />
+                  <Label layoutX="14.0" layoutY="39.0" text="player_id" />
+                  <Label layoutX="14.0" layoutY="64.0" text="first_name" />
+                  <Label layoutX="14.0" layoutY="88.0" text="last_name" />
+                  <Label layoutX="14.0" layoutY="166.0" text="province" />
+                  <Label layoutX="14.0" layoutY="142.0" text="postal_code" />
+                  <Label layoutX="14.0" layoutY="117.0" text="address" />
+                  <Label layoutX="14.0" layoutY="195.0" text="phone_number" />
+                  <TextField fx:id="playerID" layoutX="93.0" layoutY="29.0" onAction="#typingPlayerIDTextArea" onKeyTyped="#typingPlayerIDTextArea" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerTableFirstNameTextArea" layoutX="93.0" layoutY="60.0" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerTableLastNameTextArea" layoutX="93.0" layoutY="84.0" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerTableAddressTextArea" layoutX="90.0" layoutY="113.0" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerTablePostalCodeTextArea" layoutX="90.0" layoutY="138.0" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerTableProvinceTextArea" layoutX="90.0" layoutY="162.0" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerTablePhoneNumberTextArea" layoutX="104.0" layoutY="191.0" prefHeight="25.0" prefWidth="110.0" />
+                  <Button fx:id="playerTableInsertButton" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#insertPlayerTable" text="Insert" />
+                  <Label layoutX="10.0" layoutY="275.0" text="Delete Row with player id" />
+                  <Button fx:id="playerDelBtn" layoutX="15.0" layoutY="295.0" mnemonicParsing="false" onAction="#playerDelButtonClick" text="Delete" />
+                  <TextField fx:id="playerIDSearch" layoutX="153.0" layoutY="271.0" prefHeight="25.0" prefWidth="61.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="playerGameTablePane" layoutX="275.0" layoutY="33.0" prefHeight="344.0" prefWidth="251.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="PlayerAndGame" />
+                  <Label layoutX="14.0" layoutY="45.0" text="player_game_id" />
+                  <Label layoutX="14.0" layoutY="70.0" text="game_id" />
+                  <Label layoutX="14.0" layoutY="92.0" text="player_id" />
+                  <Label layoutX="14.0" layoutY="117.0" text="playing_date" />
+                  <Label layoutX="14.0" layoutY="144.0" text="score" />
+                  <TextField fx:id="playerAndGameTablePlayerGameIDTextArea" layoutX="108.0" layoutY="41.0" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerAndGameTablePlayingDateTextArea" layoutX="81.0" layoutY="113.0" prefHeight="25.0" prefWidth="121.0" />
+                  <TextField fx:id="playerAndGameTableScoreTextArea" layoutX="81.0" layoutY="140.0" prefHeight="25.0" prefWidth="121.0" />
+                  <Button fx:id="playerAndGameTableInsertButton" layoutX="15.0" layoutY="172.0" mnemonicParsing="false" onAction="#insertPlayerAndGameTable" text="Insert" />
+                  <TextField fx:id="gameIDView" layoutX="81.0" layoutY="66.0" onAction="#typingGameIDTextArea2" onKeyTyped="#typingGameIDTextArea2" />
+                  <TextField fx:id="playerIDView" layoutX="81.0" layoutY="88.0" onAction="#typingPlayerIDTextArea2" onKeyTyped="#typingPlayerIDTextArea2" />
+                  <Label layoutX="11.0" layoutY="250.0" text="Delete Row with player game id" />
+                  <Button fx:id="playerAndGameDelBtn" layoutX="16.0" layoutY="282.0" mnemonicParsing="false" onAction="#playerAndGameDelButtonClick" text="Delete" />
+                  <TextField fx:id="playerAndGameIDSearch" layoutX="182.0" layoutY="246.0" prefHeight="25.0" prefWidth="61.0" />
+               </children>
+            </Pane>
+            <Label layoutX="779.0" layoutY="6.0" text="Console" />
+            <ListView fx:id="console" layoutX="779.0" layoutY="33.0" prefHeight="52.0" prefWidth="766.0" />
+            <ListView fx:id="gameTable" layoutX="26.0" layoutY="426.0" prefHeight="166.0" prefWidth="509.0" />
+            <ListView fx:id="playerAndGameTable" layoutX="550.0" layoutY="426.0" prefHeight="166.0" prefWidth="470.0" />
+            <ListView fx:id="playerTable" layoutX="1038.0" layoutY="426.0" prefHeight="166.0" prefWidth="505.0" />
+            <Label layoutX="279.0" layoutY="393.0" text="Game" />
+            <Label layoutX="737.0" layoutY="393.0" text="PlayerAndGame" />
+            <Label layoutX="1275.0" layoutY="393.0" text="Player" />
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
